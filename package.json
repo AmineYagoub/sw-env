@@ -1,6 +1,6 @@
 {
     "name": "sw-env",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Module that loads data from Docker Secrets into process.env",
     "keywords": [
         "env",
