@@ -6,7 +6,7 @@ export default {
   input: 'index.js',
   output: [
     {
-      file: 'dist/secenv.js',
+      file: 'dist/swenv.js',
       format: 'cjs'
     }
   ],

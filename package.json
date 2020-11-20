@@ -1,11 +1,12 @@
 {
     "name": "sw-env",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Module that loads data from Docker Secrets into process.env",
     "keywords": [
         "env",
         "environment",
         "secrets",
+        "swarm",
         "docker"
     ],
     "main": "dist/swenv.js",

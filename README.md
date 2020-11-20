@@ -1,4 +1,4 @@
-# secEnv
+# swenv
 
 [![NPM](https://nodei.co/npm/sw-env.png)](https://nodei.co/npm/sw-env/)
 
@@ -37,7 +37,7 @@ version: "3.8"
 
 services:
 
-  db:
+  app:
     image: node:latest
     secrets:
       - DB_USERNAME
