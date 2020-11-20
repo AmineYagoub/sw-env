@@ -1,6 +1,6 @@
 'use strict';
 jest.mock('fs');
-import secenv from '../index'
+import swEnv from '../index'
 
 describe('listFilesInDirectorySync', () => {
 	const MOCK_FILE_INFO = {
@@ -24,7 +24,7 @@ describe('listFilesInDirectorySync', () => {
 	
 	test('SecEnv should not override existing environment by default', () => {
 		process.env['secret1'] = 'admin'
-		const secrets = secenv({ dir: '/path/to' })
+		const secrets = swEnv({ dir: '/path/to' })
 		expect(process.env.secret1).toEqual('admin');
 		expect(process.env.secret2).toEqual('password');
 		expect(secrets.getSecrets()).toEqual(SECRETS)
@@ -32,7 +32,7 @@ describe('listFilesInDirectorySync', () => {
 	
 	test('SecEnv should override existing environment', () => {
 		process.env['secret1'] = 'admin'
-		const secrets = secenv({ dir: '/path/to', override: true })
+		const secrets = swEnv({ dir: '/path/to', override: true })
 		expect(process.env.secret1).toEqual('user');
 		expect(process.env.secret2).toEqual('password');
 		expect(secrets.getSecrets()).toEqual(SECRETS)
@@ -40,7 +40,7 @@ describe('listFilesInDirectorySync', () => {
 	
 	test('SecEnv should console.log a message when secrets directory does not exist', () => {
 		const consoleSpy = jest.spyOn(console, 'log');
-		const secrets = secenv({ dir: '/path/not/exist'})
+		const secrets = swEnv({ dir: '/path/not/exist'})
 		expect(consoleSpy).toHaveBeenCalledWith('[SecEnv][DEBUG] Docker secrets is not mounted into the container');
 		expect(secrets.getSecrets()).toEqual({})
 	});
