@@ -1,5 +1,5 @@
 {
-    "name": "secenv",
+    "name": "sw-env",
     "version": "1.0.0",
     "description": "Module that loads data from Docker Secrets into process.env",
     "keywords": [
@@ -8,7 +8,7 @@
         "secrets",
         "docker"
     ],
-    "main": "dist/secenv.js",
+    "main": "dist/swenv.js",
     "files": [
         "src",
         "dist/*.js"
@@ -24,14 +24,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/AmineYagoub/secenv.git"
+        "url": "https://github.com/AmineYagoub/sw-env.git"
     },
     "author": "@_AmineYagoub",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/AmineYagoub/secenv/issues"
+        "url": "https://github.com/AmineYagoub/sw-env/issues"
     },
-    "homepage": "https://github.com/AmineYagoub/secenv#readme",
+    "homepage": "https://github.com/AmineYagoub/sw-env#readme",
     "devDependencies": {
         "@babel/core": "^7.10.2",
         "@babel/plugin-proposal-class-properties": "^7.10.1",
