@@ -1,0 +1,19 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2020": true,
+        "node": true
+    },
+    "extends": [
+        "standard"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "parser": "babel-eslint",
+    "rules": {
+        "no-misleading-character-class": 0,
+        "no-mixed-spaces-and-tabs": 0,
+        "no-tabs": 0
+    }
+}
